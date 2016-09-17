@@ -1,8 +1,8 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.3"
+    compileSdkVersion 24
+    buildToolsVersion "24.0.2"
 
     defaultConfig {
         minSdkVersion 9
@@ -12,5 +12,5 @@ android {
 
 dependencies {
     compile 'com.squareup.okhttp3:okhttp-urlconnection:3.4.1'
-    compile 'com.yolanda.nohttp:nohttp:1.0.6'
+    compile 'com.yolanda.nohttp:nohttp:1.0.7'
 }

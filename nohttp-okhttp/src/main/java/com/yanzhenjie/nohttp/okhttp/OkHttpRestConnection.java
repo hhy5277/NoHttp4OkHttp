@@ -245,8 +245,7 @@ public class OkHttpRestConnection implements IRestConnection {
         }
 
         // Cookie.
-        if (NoHttp.isEnableCookie() && uri != null)
-            headers.addCookie(uri, NoHttp.getDefaultCookieManager());
+        headers.addCookie(uri, NoHttp.getDefaultCookieManager());
 
         Map<String, String> requestHeaders = headers.toRequestHeaders();
 
@@ -369,12 +368,11 @@ public class OkHttpRestConnection implements IRestConnection {
      */
     private Headers parseResponseHeaders(URI uri, int responseCode, String responseMessage, Map<String, List<String>> responseHeaders) {
         // handle cookie
-        if (NoHttp.isEnableCookie())
-            try {
-                NoHttp.getDefaultCookieManager().put(uri, responseHeaders);
-            } catch (IOException e) {
-                Logger.e(e, "Save cookie filed: " + uri.toString() + ".");
-            }
+        try {
+            NoHttp.getDefaultCookieManager().put(uri, responseHeaders);
+        } catch (IOException e) {
+            Logger.e(e, "Save cookie filed: " + uri.toString() + ".");
+        }
 
         // handle headers
         Headers headers = new HttpHeaders();

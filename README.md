@@ -7,7 +7,7 @@ NoHttp开源地址：[https://github.com/yanzhenjie/NoHttp](https://github.com/y
 
 OkHttp开源地址：[https://github.com/square/okhttp](https://github.com/square/okhttp)。  
 
-严振杰的主页：[www.yanzhenjie.com](http://www.yanzhenjie.com)。
+严振杰的主页：[www.yanzhenjie.com](http://www.yanzhenjie.com)。  
 严振杰的博客：[blog.yanzhenjie.com](http://blog.yanzhenjie.com)。
 
 QQ技术群来：547839514，加群请一定阅读[群行为规范](https://github.com/yanzhenjie/SkillGroupRule)。
@@ -16,7 +16,7 @@ QQ技术群来：547839514，加群请一定阅读[群行为规范](https://gith
 首先大家应该阅读下我对NoHttp的源码分析：  
 [http://blog.csdn.net/yanzhenjie1003/article/details/52413226](http://blog.csdn.net/yanzhenjie1003/article/details/52413226)。  
 
-其次要阅读替换OkHttp为NoHttp底层的教程：  
+替换OkHttp为NoHttp底层的原理（本项目的原理）：  
 [http://blog.csdn.net/yanzhenjie1003/article/details/52439317](http://blog.csdn.net/yanzhenjie1003/article/details/52439317)。  
 
 上了上面的文章后你会知道NoHttp的网络层是对外提供了一个接口`IRestConnection`，我们的OkHttp需要针对`IRestCOnnection`写一个实现类即可，具体教程请看上面第二篇博客。
@@ -24,7 +24,7 @@ QQ技术群来：547839514，加群请一定阅读[群行为规范](https://gith
 ## 如何引用
 * 使用Gradle远程依赖，推荐
 ```groovy
-compile 'com.yanzhenjie.nohttp:nohttp-okhttp:1.0.0'
+compile 'com.yanzhenjie.nohttp:nohttp-okhttp:1.0.1'
 ```
 
 Or Maven
@@ -32,7 +32,7 @@ Or Maven
 <dependency>
   <groupId>com.yanzhenjie.nohttp</groupId>
   <artifactId>nohttp-okhttp</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <type>pom</type>
 </dependency>
 ```
